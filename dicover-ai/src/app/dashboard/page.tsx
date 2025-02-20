@@ -53,7 +53,7 @@ export default function DashboardPage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="min-h-screen bg-gradient-to-bl from-purple-900 via-purple-800 to-black">
+    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-purple-700">
       <nav className="border-b border-purple-700 bg-purple-900/50 backdrop-blur-sm">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -62,7 +62,6 @@ export default function DashboardPage() {
                 Discover.AI
               </span>
             </div>
-
             <div className="flex items-center gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-purple-400" />
@@ -133,10 +132,8 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Analytics Chart */}
-          <div className="lg:col-span-2 bg-purple-900/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/50">
+          <div className="lg:col-span-2 bg-purple-900/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/50 shadow-lg">
             <h3 className="text-lg font-semibold text-purple-200 mb-4">
               Analytics Overview
             </h3>
@@ -171,8 +168,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* Recent Documents */}
-          <div className="bg-purple-900/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/50">
+          <div className="bg-purple-900/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/50 shadow-lg">
             <h3 className="text-lg font-semibold text-purple-200 mb-4">
               Recent Documents
             </h3>
@@ -209,7 +205,6 @@ export default function DashboardPage() {
               ))}
             </div>
 
-            {/* Upload Button */}
             <Button className="w-full mt-4 bg-purple-600 hover:bg-purple-700 text-white">
               <Upload className="h-4 w-4 mr-2" />
               Upload New Document
